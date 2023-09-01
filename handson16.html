@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>handson16</title>
+</head>
+<body>
+    <h1>Cálculo da Raiz de Delta</h1>
+    <p>Insira os coeficientes da equação quadrática:</p>
+
+    
+   A:   <input type="number" id="coeficiente-a"><br>
+   B:    <input type="number" id="coeficiente-b"><br>
+   C:   <input type="number" id="coeficiente-c"><br>
+   <button onclick="calcularRaizDelta()">Media</button>
+    <p id="solucao"></p>
+
+
+    <script>
+        function calcularRaizDelta() {
+            var a = parseFloat(document.getElementById("coeficiente-a").value);
+            var b = parseFloat(document.getElementById("coeficiente-b").value);
+            var c = parseFloat(document.getElementById("coeficiente-c").value);
+            var delta = b ** 2 - 4 * a * c;
+            if (delta < 0) {
+                alert("Delta é negativo, não há raizes reais.");
+            } else {
+                var raizDelta = delta ** 0.5;
+                var x1 = (-b + raizDelta) / (2 * a);
+                var x2 = (-b - raizDelta) / (2 * a);
+                alert(" Delta é igaul a " + delta);
+                alert(" Raiz quadrada de é igual a " + raizDelta);
+                alert(" As raizes da equação são x1 = " + x1 + "e x2 =" + x2);
+            }
+        }
+    </script>
+</body>
+</html
