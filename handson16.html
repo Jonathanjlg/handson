@@ -1,47 +1,59 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>handson16</title>
 </head>
+     <!--      aqui começa meu projeto                                                    -->
 <body>
+    <!--       aqui esta meu tiluto                                                  -->
     <h1>Cálculo da Raiz de Delta</h1>
+    <!--         aqui o subtitulo                                                 -->
     <p>Insira os coeficientes da equação quadrática:</p>
-
-    
-
-
-
-
-
-
-    
+<!--             aqui minha primeira caixinha para coloca os numeros                                               -->
    A:   <input type="number" id="coeficiente-a"><br>
+   <!--     aqui a segunda caixa de coloca os numeros                                            -->
    B:    <input type="number" id="coeficiente-b"><br>
+   <!--     aqui a terceira caixa de coloca os numeros                                                   -->
    C:   <input type="number" id="coeficiente-c"><br>
+   <!--     a seguir vem o botão para calcular                                                  -->
    <button onclick="calcularRaizDelta()">Media</button>
-    <p id="solucao"></p>
 
 
+           
     <script>
+        // aqui começa meu meu script com a função do html 
         function calcularRaizDelta() {
+            //  aqui comaça minhas variaveis(A)
             var a = parseFloat(document.getElementById("coeficiente-a").value);
+            //  aqui a segunda variavel(B)
             var b = parseFloat(document.getElementById("coeficiente-b").value);
+            //  aqui a terceira variavel(C)
             var c = parseFloat(document.getElementById("coeficiente-c").value);
+            //    aqui a primeira variavel com calculo
             var delta = b ** 2 - 4 * a * c;
+            //  aqui se delta for menor  que 0 ele e negativo, nao ha raizes real 
             if (delta < 0) {
+                //  primeiro alerta 
                 alert("Delta é negativo, não há raizes reais.");
             } else {
+
                 var raizDelta = delta ** 0.5;
+                // aqui a primeira varialvel se delta tiver raiz
                 var x1 = (-b + raizDelta) / (2 * a);
+                // aqui um vaiavel para calcular a raiz
                 var x2 = (-b - raizDelta) / (2 * a);
+                // aqui mais uma variavel
                 alert(" Delta é igaul a " + delta);
+                // aqui um alerta da raiz quadrada de delta 
                 alert(" Raiz quadrada de é igual a " + raizDelta);
-                alert(" As raizes da equação são x1 = " + x1 + "e x2 =" + x2);
-            }
+                
+                
         }
+    }
     </script>
 </body>
 </html
